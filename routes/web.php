@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ImageController;
+use App\Models\Image;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $getData = Image::all();
+    session()->flash('data_img', $getData);
+    return view('exam');
 });
+
+
+Route::post('/upload-image', [ImageController::class, 'upload'])->name('upload.image');
