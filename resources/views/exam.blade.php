@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Exam</title>
+    <title>Imagessv</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -412,7 +412,7 @@
 <body class="antialiased">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="d-flex justify-content-center mt-5">
                     <form action="{{ route('upload.image') }}" method="POST" enctype="multipart/form-data">
                         @csrf
@@ -434,11 +434,7 @@
                     </div>
                 </div>
 
-            </div>
-
-            <div class="col-md-4">
-            
-            </div>
+        </div>
         </div>
     </div>
 
